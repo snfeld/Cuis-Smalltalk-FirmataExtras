@@ -158,7 +158,7 @@ firmata version.                     "z. B. 2.5 (StandardFirmata)"
 
 ```smalltalk
 "Pin 13 als Ausgang und anschalten"
-firmata pin: 13 mode: FirmataTest stubbedInputMode.  "siehe Hinweis"
+firmata digitalPin: 13 mode: 1.      "OUTPUT = 1"
 firmata digitalWrite: 13 value: 1.
 ```
 
@@ -200,7 +200,7 @@ firmata isFirmataInstalled.
 firmata i2cConfig.
 pwm := FirmataPCA9685 new firmata: firmata address: 0x40.
 pwm registerWithFirmata.                "gerät im Bus registrieren"
-pwm setFrequency: 50.                   "50 Hz (20 ms pro Kanal)"
+pwm initializeDevice.                   "Modi, Auto-Increment und 50 Hz"
 pwm setPWMOnChannel: 0 value: 128.      "Duty 128/4096"
 pwm setServoOnChannel: 1 angle: 90.     "Servo an Kanal 1 auf 90°"
 ```

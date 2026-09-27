@@ -195,7 +195,7 @@ firmata isFirmataInstalled.
 firmata i2cConfig.
 pwm := FirmataPCA9685 new firmata: firmata address: 0x40.
 pwm registerWithFirmata.                "デバイスをバスに登録"
-pwm setFrequency: 50.                   "50 Hz（各チャンネル 20 ms）"
+pwm initializeDevice.                   "モード、自動インクリメント、50 Hz"
 pwm setPWMOnChannel: 0 value: 128.      "デューティ 128/4096"
 pwm setServoOnChannel: 1 angle: 90.     "チャンネル 1 のサーボを 90° に"
 ```

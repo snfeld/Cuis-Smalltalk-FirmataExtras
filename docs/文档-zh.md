@@ -174,7 +174,6 @@ firmata detachServoFromPin: 9.
 
 如需带速度、安装范围和 180°/270° 舵机的高级控制（引脚或 PCA9685），请使用
 `Firmata-Servo` 包，参见 [Servo-文档-zh.md](Servo-文档-zh.md)。
-```
 
 ### 5.5 使用 I2C 设备（以 PCA9685 为例）
 
@@ -186,7 +185,7 @@ firmata isFirmataInstalled.
 firmata i2cConfig.
 pwm := FirmataPCA9685 new firmata: firmata address: 0x40.
 pwm registerWithFirmata.                "在总线上注册设备"
-pwm setFrequency: 50.                   "50 Hz（每通道 20 ms）"
+pwm initializeDevice.                   "模式、自动递增、50 Hz"
 pwm setPWMOnChannel: 0 value: 128.      "占空比 128/4096"
 pwm setServoOnChannel: 1 angle: 90.     "通道 1 上的舵机转到 90°"
 ```

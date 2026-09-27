@@ -195,7 +195,7 @@ firmata isFirmataInstalled.
 firmata i2cConfig.
 pwm := FirmataPCA9685 new firmata: firmata address: 0x40.
 pwm registerWithFirmata.                "register the device on the bus"
-pwm setFrequency: 50.                   "50 Hz (20 ms per channel)"
+pwm initializeDevice.                   "modes, auto-increment and 50 Hz"
 pwm setPWMOnChannel: 0 value: 128.      "duty 128/4096"
 pwm setServoOnChannel: 1 angle: 90.     "servo on channel 1 at 90°"
 ```
