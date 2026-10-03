@@ -1,4 +1,4 @@
-# BMP280 – Barometrischer Druck- & Temperatursensor (Deutsch)
+# BMP280 – Barometrischer Druck- & Temperatursensor
 
 Inhalt:
 1. Überblick

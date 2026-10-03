@@ -1,4 +1,4 @@
-# BMP280 – Barometric Pressure & Temperature Sensor (English)
+# BMP280 – Barometric Pressure & Temperature Sensor
 
 Contents:
 1. Overview

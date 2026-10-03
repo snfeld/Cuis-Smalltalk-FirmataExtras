@@ -1,4 +1,4 @@
-# BMP280 – Capteur barométrique de pression et de température (Français)
+# BMP280 – Capteur barométrique de pression et de température
 
 Sommaire :
 1. Vue d'ensemble
